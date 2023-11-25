@@ -109,7 +109,17 @@ namespace MouWallet
 
         private void btn_nosotros_Click(object sender, EventArgs e)
         {
+            aboutUs aboutUs = new aboutUs();
+            TabPage nuevaPestaña = new TabPage("Sobre nosotros");
 
+            aboutUs.TopLevel = false;
+            nuevaPestaña.Controls.Add(aboutUs);
+            aboutUs.Dock = DockStyle.Fill;
+            aboutUs.FormBorderStyle = FormBorderStyle.None;
+            aboutUs.Show();
+
+            tbctrl_añadir_cuentas.TabPages.Add(nuevaPestaña);
+            tbctrl_añadir_cuentas.SelectedTab = nuevaPestaña;
         }
 
         private void btn_libros_Click(object sender, EventArgs e)
