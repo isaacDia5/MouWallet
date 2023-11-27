@@ -147,6 +147,7 @@
             usuario_log_logo.Size = new Size(35, 35);
             usuario_log_logo.TabIndex = 6;
             usuario_log_logo.TabStop = false;
+            usuario_log_logo.Click += usuario_log_logo_Click;
             // 
             // contraseña_log_logo
             // 

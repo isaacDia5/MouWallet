@@ -211,6 +211,7 @@
             btn_manual.Text = "                 Manual";
             btn_manual.TextAlign = ContentAlignment.MiddleLeft;
             btn_manual.UseVisualStyleBackColor = true;
+            btn_manual.Click += btn_manual_Click;
             // 
             // sidebar_timer
             // 

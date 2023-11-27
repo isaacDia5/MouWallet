@@ -112,6 +112,7 @@
             login_button.TabIndex = 24;
             login_button.Text = "Registrarse";
             login_button.UseVisualStyleBackColor = false;
+            login_button.Click += login_button_Click;
             // 
             // contraseña_log_logo
             // 
@@ -146,6 +147,7 @@
             contraseña_log_text.PasswordChar = '•';
             contraseña_log_text.Size = new Size(295, 35);
             contraseña_log_text.TabIndex = 19;
+            contraseña_log_text.TextChanged += contraseña_log_text_TextChanged;
             // 
             // usuario_log_text
             // 
@@ -269,6 +271,7 @@
             confirmar_text.PasswordChar = '•';
             confirmar_text.Size = new Size(295, 35);
             confirmar_text.TabIndex = 19;
+            confirmar_text.TextChanged += confirmar_text_TextChanged;
             // 
             // pictureBox1
             // 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MouWallet.Config;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -59,6 +60,37 @@ namespace MouWallet
         private void btnVerCC_Click(object sender, EventArgs e)
         {
             confirmar_text.UseSystemPasswordChar = !confirmar_text.UseSystemPasswordChar;
+        }
+
+        private void contraseña_log_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirmar_text_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void login_button_Click(object sender, EventArgs e)
+        {
+            SuperadminConfig superadminConfig = new SuperadminConfig();
+
+            if (contraseña_log_text.Text == confirmar_text.Text)
+            {
+                SuperadminConfig.Usuario = usuario_log_text.Text;
+                SuperadminConfig.Contraseña = contraseña_log_text.Text;
+                
+
+                MessageBox.Show("Su cuenta ha sido registrada, regrese al formulario de inicio de sesión");
+                usuario_log_text.Text = null;
+                contraseña_log_text.Text = null;
+                confirmar_text.Text = null;
+            }
+            else
+            {
+                MessageBox.Show("Sus contraseñas no son compatibles, intentalo nuevamente");
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -126,6 +127,25 @@ namespace MouWallet
         {
             AñadirCuentas añadirCuentas = new AñadirCuentas();
             añadirCuentas.ExportarDataGridViewAExcel();
+        }
+
+        private void btn_manual_Click(object sender, EventArgs e)
+        {
+            string enlace = "https://drive.google.com/drive/folders/1GvJLDMe3WpQp3OIbSne4pLYeN7YiH312?usp=sharing";
+
+            try
+            {
+                // Abre el enlace en el navegador predeterminado del sistema
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = enlace,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al abrir el enlace: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

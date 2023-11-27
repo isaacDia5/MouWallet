@@ -20,7 +20,7 @@ namespace MouWallet
         //Este es el boton de máximizar
         private void max_win_Click(object sender, EventArgs e)
         {
-
+        
         }
 
 
@@ -68,6 +68,11 @@ namespace MouWallet
                 usuario_log_text.Text = "";
                 contraseña_log_text.Text = "";
             }
+        }
+
+        private void usuario_log_logo_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
